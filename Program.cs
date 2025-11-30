@@ -74,6 +74,6 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
-app.Urls.Add("http://localhost:5000"); // Listen on HTTP port 5000
-app.Urls.Add("https://localhost:5001"); // Listen on HTTPS port 5001
+//app.Urls.Add("http://localhost:5000"); // Listen on HTTP port 5000
+//app.Urls.Add("https://localhost:5001"); // Listen on HTTPS port 5001
 app.Run();
