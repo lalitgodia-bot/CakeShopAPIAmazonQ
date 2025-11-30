@@ -22,8 +22,6 @@ public class AuthService : IAuthService
     public async Task<string?> LoginAsync(string email, string password)
     {
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-         
-        Console.WriteLine(" Verify: " + BCrypt.Net.BCrypt.Verify("Test@123", user?.PasswordHash) );
         if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
             return null;
 
@@ -34,14 +32,12 @@ public class AuthService : IAuthService
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
         var claims = new[]
         {
-            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role.ToString())
+            new Claim("UserId", user.UserId.ToString()),
+            new Claim("Email", user.Email),
+            new Claim("role", user.Role.ToString())
         };
-
         var token = new JwtSecurityToken(
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],
@@ -49,7 +45,6 @@ public class AuthService : IAuthService
             expires: DateTime.UtcNow.AddHours(24),
             signingCredentials: credentials
         );
-
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

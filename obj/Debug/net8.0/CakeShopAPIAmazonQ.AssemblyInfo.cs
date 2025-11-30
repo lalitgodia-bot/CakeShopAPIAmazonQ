@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CakeShopAPIAmazonQ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3db7fd6b54afe2a976032039859d00746c9b3ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("CakeShopAPIAmazonQ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CakeShopAPIAmazonQ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
