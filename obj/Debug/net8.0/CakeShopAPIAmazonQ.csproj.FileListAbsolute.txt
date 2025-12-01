@@ -112,3 +112,8 @@ C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\Microsoft.Ide
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\obj\Debug\net8.0\CakeShopAPIAmazonQ.sourcelink.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\out\web.config
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\out\appsettings.Development.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\out\appsettings.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\out\CakeShopAPIAmazonQ.deps.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\bin\Debug\net8.0\out\CakeShopAPIAmazonQ.runtimeconfig.json
