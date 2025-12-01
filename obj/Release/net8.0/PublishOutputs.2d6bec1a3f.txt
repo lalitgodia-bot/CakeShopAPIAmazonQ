@@ -1,6 +1,11 @@
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\CakeShopAPIAmazonQ.exe
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\out\web.config
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\appsettings.Development.json
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\appsettings.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\out\appsettings.Development.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\out\appsettings.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\out\CakeShopAPIAmazonQ.deps.json
+C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\out\CakeShopAPIAmazonQ.runtimeconfig.json
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\CakeShopAPIAmazonQ.dll
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\CakeShopAPIAmazonQ.deps.json
 C:\Projects\AmazonQCakeShopAPI\CakeShopAPIAmazonQ\out\CakeShopAPIAmazonQ.runtimeconfig.json
