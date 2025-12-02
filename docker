@@ -1,18 +1,24 @@
-# Use ASP.NET runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-# Build using .NET SDK
+# ---- Build Stage ----
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY . .
-RUN dotnet restore "CakeShopAPIAmazonQ.csproj"
-RUN dotnet publish "CakeShopAPIAmazonQ.csproj" -c Release -o /app/publish
 
-# Final image
-FROM base AS final
+# copy csproj and restore
+COPY *.csproj .
+RUN dotnet restore
+
+# copy everything and publish (NO --no-restore here!)
+COPY . .
+RUN dotnet publish -c Release -o /app/publish
+
+# ---- Runtime Stage ----
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
+
+# copy published output
 COPY --from=build /app/publish .
+
+# expose port (Railway auto maps, but good to keep)
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
+
 ENTRYPOINT ["dotnet", "CakeShopAPIAmazonQ.dll"]
