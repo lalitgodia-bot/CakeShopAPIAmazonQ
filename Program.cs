@@ -7,6 +7,10 @@ using CakeShopAPIAmazonQ.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure for Railway deployment
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllers();
@@ -43,9 +47,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:3000", "https://*.railway.app", "https://*.up.railway.app")
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .SetIsOriginAllowedToAllowWildcardSubdomains();
     });
 });
 

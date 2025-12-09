@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["dotnet publish --configuration Release --output out"]
+
+[phases.start]
+cmd = "dotnet out/CakeShopAPIAmazonQ.dll"
